@@ -19,7 +19,11 @@ export class ProductsService {
   }
 
   searchCategoryProduct(categoryId: string){
-    const baseUrl="http://localhost:3000/products"+categoryId;
+    const baseUrl="http://localhost:3000/products/categoer="+categoryId;
+    return this.httpClient.get(baseUrl);
+  }
+  searchDateProduct(dateParam: string){
+    const baseUrl="http://localhost:3000/products/date="+dateParam;
     return this.httpClient.get(baseUrl);
   }
 }
