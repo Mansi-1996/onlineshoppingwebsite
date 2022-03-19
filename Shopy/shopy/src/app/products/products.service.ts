@@ -30,7 +30,7 @@ export class ProductsService {
     return this.httpClient.get<Products>(baseUrl);
   }
   getCategory(){
-    const categoryUrl="http://localhost:3000/categories"
+    const categoryUrl="http://localhost:3000/categories";
     return this.httpClient.get<Category>(categoryUrl);
   }
 }
