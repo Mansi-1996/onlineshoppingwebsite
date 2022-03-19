@@ -21,7 +21,7 @@ export class ProductsService {
   }
 
   searchCategoryProduct(categoryId: string):Observable<Products>{
-    const baseUrl="http://localhost:3000/products/categoer="+categoryId;
+    const baseUrl="http://localhost:3000/products/category="+categoryId;
     return this.httpClient.get<Products>(baseUrl);
   }
   searchDateProduct(dateParam: string):Observable<Products>{
