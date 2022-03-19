@@ -8,8 +8,13 @@ export class ProductsService {
 
   constructor(private httpClient:HttpClient) { }
 
-  createProduct(ProductBody){
+  createProduct(productBody: any) {
     const baseUrl="http://localhost:3000/products";
-    return this.httpClient.post(baseUrl,ProductBody);
+    return this.httpClient.post(baseUrl,productBody);
+  }
+  
+  viewProduct(productId: string){
+    const baseUrl="http://localhost:3000/products"+productId;
+    return this.httpClient.get(baseUrl);
   }
 }
