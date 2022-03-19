@@ -7,4 +7,9 @@ import { Injectable } from '@angular/core';
 export class ProductsService {
 
   constructor(private httpClient:HttpClient) { }
+
+  createProduct(ProductBody){
+    const baseUrl="http://localhost:3000/products";
+    return this.httpClient.post(baseUrl,ProductBody);
+  }
 }
