@@ -39,8 +39,8 @@
     ],
     "categories":[
       {"id":1, "categoryName": "Men"},
-      {"id":2, "categoryName": "Men"},
-      {"id":3, "categoryName": "Men"},
+      {"id":2, "categoryName": "Women"},
+      {"id":3, "categoryName": "Kids"},
       
     ]
 }
