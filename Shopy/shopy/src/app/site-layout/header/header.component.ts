@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Products } from 'src/app/products/products';
+import { ProductsService } from 'src/app/products/products.service';
+import { Category } from '../category';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  categoryList:Category| undefined;
+  constructor(private productsService:ProductsService) { }
 
   ngOnInit(): void {
+    this.productsService.getCategory().subscribe(data=>{
+      this.categoryList= data;
+    })
   }
 
 }
